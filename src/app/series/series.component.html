@@ -1,0 +1,26 @@
+
+<link rel="stylesheet" href="./styles/style.css">
+<h3 class="title">Series</h3>
+<section class="grid" id="cards" >
+
+  <div class="card" [routerLink]="['/detailsSeries',serie[0]]" *ngFor="let serie of series | paginate:{itemsPerPage:8,currentPage:page}">
+
+    <img [src]="serie[3]" alt="">
+
+    <div class="container">
+
+      <h3 [textContent]="serie[1]"></h3>
+
+      <h4 [textContent]="serie[2]"></h4>
+
+    </div>
+
+  </div>
+    
+</section>
+<div class="pagination">
+  <pagination-controls  (pageChange)="page =$event"
+  previousLabel="Anterior" nextLabel="Siguiente">
+
+</pagination-controls>
+</div>

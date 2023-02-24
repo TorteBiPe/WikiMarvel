@@ -1,0 +1,26 @@
+
+<link rel="stylesheet" href="./styles/style.css">
+<h3 class="title">Personajes</h3>
+<section class="grid" id="cards" >
+
+  <div class="card" [routerLink]="['/detailsCharacters',character[0]]" *ngFor="let character of characters | paginate:{itemsPerPage:6,currentPage:page}">
+
+    <img [src]="character[3]" alt="">
+
+    <div class="container">
+
+      <h3 [textContent]="character[1]"></h3>
+
+      <h4 [textContent]="character[2]"></h4>
+
+    </div>
+
+  </div>
+    
+</section>
+<div class="pagination">
+  <pagination-controls  (pageChange)="page =$event"
+  previousLabel="Anterior" nextLabel="Siguiente">
+
+</pagination-controls>
+</div>

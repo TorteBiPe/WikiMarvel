@@ -1,0 +1,11 @@
+* {
+  display: grid;
+  gap: 1em;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 600px), 1fr));
+}
+
+.header {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+}/*# sourceMappingURL=style.css.map */

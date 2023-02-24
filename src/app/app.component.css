@@ -1,0 +1,10 @@
+.content {
+  background-image: url("https://picfiles.alphacoders.com/593/593970.jpeg");
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}/*# sourceMappingURL=app.component.css.map */

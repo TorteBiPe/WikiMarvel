@@ -1,0 +1,25 @@
+<button [routerLink]="['/characters']">Volver</button>
+
+<article class="text" id="charactercard" [(ngModel)]="detail">
+  <img [src]="detail[2]" alt="">
+  <p>Título</p>
+  <li [textContent]="detail[0]"></li>
+  <p>Descripción</p>
+  <li [textContent]="detail[1]"></li>
+  <p>Comics</p>
+  <ul *ngFor="let comic of comicsCharact">
+    <li [textContent]="comic.name"></li>
+  </ul>
+  <div *ngIf="storiesCharact.length != 0">
+    <p>Historias</p>
+    <ul *ngFor="let story of storiesCharact">
+      <li [textContent]="story.name"></li>
+    </ul>
+  </div>
+  <div *ngIf="seriesCharact.length != 0">
+    <p>Series</p>
+    <ul *ngFor="let story of seriesCharact">
+      <li [textContent]="story.name"></li>
+    </ul>
+  </div>
+</article>

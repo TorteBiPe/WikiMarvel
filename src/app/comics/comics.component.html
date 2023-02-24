@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="./styles/style.css">
+
+<h3 class="title">Comics</h3>
+<section class="grid" id="cards" >
+
+  <div class="card" [routerLink]="['/detailsComics',comic[0]]" *ngFor="let comic of comics | paginate:{itemsPerPage:6,currentPage:page}">
+
+    <img [src]="comic[3]" alt="">
+
+    <div class="container">
+
+      <h3 [textContent]="comic[1]"></h3>
+
+      <h4 id="description" [textContent]="comic[2]"></h4>
+
+    </div>
+
+  </div>
+    
+</section>
+
+<div class="pagination">
+  <pagination-controls  (pageChange)="page =$event"
+  previousLabel="Anterior" nextLabel="Siguiente">
+
+</pagination-controls>
+</div>

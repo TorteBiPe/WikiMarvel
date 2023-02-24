@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="./styles/style.css" />
+
+<button [routerLink]="['/comics']">Volver</button>
+
+<article class="text" id="comiccard" [(ngModel)]="detail">
+  <img [src]="detail[2]" alt="" />
+  <div class="detailcard">
+    <div>
+      <p>Título</p>
+      <li [textContent]="detail[0]"></li>
+    </div>
+
+    <div>
+      <p>Descripción</p>
+      <li [textContent]="detail[1]"></li>
+    </div>
+
+    <div *ngIf="detail[3] != 0">
+      <p>Páginas</p>
+      <li [textContent]="detail[3]"></li>
+    </div>
+    <div>
+      <p>Precio</p>
+      <li [textContent]="detail[4]"></li>
+    </div>
+
+    <div>
+      <p>Historias</p>
+      <li [textContent]="detail[5]"></li>
+    </div>
+  </div>
+</article>
+<div></div>
